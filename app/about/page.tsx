@@ -1,24 +1,29 @@
-import { Reveal } from "../Reveal/reveal"
+import { revalidatePath } from "next/cache";
+import { Reveal } from "../../components/Reveal/reveal"
 import { PrismaClient } from '@prisma/client'
 
-
-async function getDB() {
-  const prisma = new PrismaClient()
-  let data = await prisma.users.findFirst()
-  console.log(data);
-  return data;
-}
-
-export default function About() {
+export default async function About() {
   
-  getDB();
-
+  const prisma = new PrismaClient()
+  const data = await prisma.users.findMany()
 
   return (
     
     <main>
       <Reveal>
+        <>
         <div>About</div>
+        
+        </>
+      </Reveal>
+
+      <Reveal>
+        <>
+        {data.map((user: any) => {
+          return <div key={user.id}>{user.login} --- pass: {user.password}</div>
+        })
+        }
+        </>
       </Reveal>
     </main>
   );
