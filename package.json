@@ -9,7 +9,7 @@
     "lint": "next lint",
     "pm2": "pm2 start bun --name oleych.com -- start",
     "pm2_kill": "pm2 delete oleych.com",
-    "restart": "bun run build; pm2 delete oleych.com; pm2 start bun --name oleych.com -- start"
+    "restart": "git pull; bun run build; pm2 delete oleych.com; pm2 start bun --name oleych.com -- start"
   },
   "dependencies": {
     "@prisma/client": "^5.9.0",
