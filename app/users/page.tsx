@@ -11,8 +11,8 @@ export default async function Users({}) {
         
         <>
             {data.map((user: users) => {
-            return (<Reveal>
-                <div key={user.id}>{user.login} --- pass: {user.password}</div>
+            return (<Reveal key={user.id}>
+                <div >{user.login} --- pass: {user.password}</div>
                 </Reveal>);
             })
             }
