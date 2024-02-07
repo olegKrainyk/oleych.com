@@ -4,11 +4,11 @@
     top: 0;
     right: 0;
     z-index: 100;
+    /* width: 100vw; */
     width: 150px;
     transition: transform 0.3s ease-in-out;
-    background-color: rgb(34, 32, 32);
-    border-left: 1px solid #e0e0e0;
-
+    background-color: black;
+    clip-path: polygon(100% 0, 0% 0, 100% 100%);
 }
 
 .navigation {
@@ -17,7 +17,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 20px 0;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .link {
