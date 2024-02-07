@@ -4,14 +4,14 @@ export default function About() {
 
   return (
     
-    <main>
+    <div>
       <Reveal>
         <>
         <div>About</div>
         
         </>
       </Reveal>
-    </main>
+    </div>
   );
 }
 

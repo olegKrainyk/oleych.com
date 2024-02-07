@@ -1,5 +1,6 @@
 "use server";
 
+import { Reveal } from "@/components/Reveal/reveal";
 import prisma from "@/lib/prisma";
 import { users } from "@prisma/client"
 import { revalidatePath } from "next/cache"
@@ -26,14 +27,21 @@ export default async function User({ params }: { params: { id: number } }) {
     const data = await getUserData();
    
     return (
-        data.user === null ? <div>User not found</div> :
-        <main>
-            <h1>User</h1>
+        data.user === null ? <Reveal><>User not found</></Reveal> :
+        <div>
+            <Reveal>
+                <div>
+                    user page: {data.user.id}
+                </div>
+            </Reveal>
             <div>
-            <h2>{data.user.login}</h2>
-            <p>id: {data.user.id}</p>
-            <p>password: {data.user.password}</p>
+                <Reveal>
+                    <div>login: {data.user.login}</div>
+                </Reveal>
+                <Reveal>
+                    <div>password: {data.user.password}</div>
+                </Reveal>
             </div>
-        </main>
+        </div>
         );
 }

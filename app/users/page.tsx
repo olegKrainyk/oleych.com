@@ -15,7 +15,7 @@ export default async function Users({}) {
   revalidatePath('/users');
 
     return (
-      <main>  
+      <div>
             {data.map((user: users) => {
             return (
               <>
@@ -32,6 +32,6 @@ export default async function Users({}) {
             
             <Link href={"/users/addUser"}>Add user</Link>
             <Link href={"/users/removeUser"}>Remove user</Link>
-      </main>
+      </div>
     );
   }
