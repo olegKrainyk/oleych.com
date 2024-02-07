@@ -1,0 +1,8 @@
+.submit {
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+    margin: 0 10px;
+    color: rgb(209, 20, 20);
+    cursor: pointer;
+}

@@ -4,6 +4,7 @@ import { PrismaClient, users } from '@prisma/client'
 import { revalidatePath } from "next/cache"
 import Link from "next/link"
 import prisma from '../../lib/prisma'
+import style from './style.module.css'
 
 export default async function Users({}) {
   async function fetchUsers() {
@@ -18,15 +19,15 @@ export default async function Users({}) {
       <div>
             {data.map((user: users) => {
             return (
-              <>
+              <div className={style.user} key={user.id}>
               <RemoveUser id={user.id}>
                 <div></div>
               </RemoveUser>
             
-              <Reveal key={user.id}>
+              <Reveal>
                 <Link href={`users/${user.id}`}>{user.login} --- pass: {user.password} ---- id: {user.id}</Link>
               </Reveal>
-              </>
+              </div>
             );
             })}
             
