@@ -17,6 +17,7 @@ export default async function Users({}) {
 
     return (
       <div>
+        <div>USERS</div>
             {data.map((user: users) => {
             return (
               <div className={style.user} key={user.id}>

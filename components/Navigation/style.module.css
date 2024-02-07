@@ -1,0 +1,31 @@
+.wrapper {
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+    background-color: rgb(34, 32, 32);
+    border-left: 1px solid #e0e0e0;
+
+}
+
+.navigation {
+    height: 30dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}

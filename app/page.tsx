@@ -7,9 +7,8 @@ export default function Home() {
     <main>
       <Reveal>
         <>
+        <div>HOME</div>
           <div>oleych.com</div>
-          <Link href={"/about"}>About</Link>
-          <Link href={"/users"}>Users</Link>
         </>
       </Reveal>
     </main>
