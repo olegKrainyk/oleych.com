@@ -31,7 +31,7 @@ export default async function User({ params }: { params: { id: number } }) {
         <div>
             <Reveal>
                 <div>
-                    user page: {data.user.id}
+                    user id: {data.user.id}
                 </div>
             </Reveal>
             <div>

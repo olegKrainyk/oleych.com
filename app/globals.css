@@ -2,3 +2,26 @@ body {
   background-color: black;
   color: white;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  width: 200px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}

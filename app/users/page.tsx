@@ -33,7 +33,7 @@ export default async function Users({}) {
             })}
             
             <Link href={"/users/addUser"}>Add user</Link>
-            {/* <Link href={"/users/removeUser"}>Remove user</Link> */}
+            
       </div>
     );
   }
