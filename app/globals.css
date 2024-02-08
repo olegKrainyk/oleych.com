@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: white;
+  font-family: Arial, sans-serif;
 }
 
 a {
@@ -14,12 +15,6 @@ button {
   border: 1px solid white;
   padding: 10px 20px;
   cursor: pointer;
-}
-
-button:disabled {
-  background-color: rgb(119, 119, 119);
-  color: black;
-  cursor: not-allowed;
 }
 
 input {

@@ -1,7 +1,7 @@
-import prisma from "@/lib/prisma";
+import prisma from "@/lib/prisma"
 import { revalidatePath } from "next/cache"
 import React from "react"
-import style from './style.module.css'
+import SubmitBtn from "../SubmitBtn/SubmitBtn"
 
     interface Props {
         children: JSX.Element;
@@ -31,7 +31,7 @@ import style from './style.module.css'
             <form action={removeUser}>
                 <input type="hidden" name="id" value={id} />
                 {children}
-                <button type="submit" className={style.submit}>-</button>
+                <SubmitBtn text="-" class="redminus" />
             </form>
         );
 }

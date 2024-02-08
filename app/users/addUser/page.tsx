@@ -8,7 +8,7 @@ export default async function addUser() {
 
     const addUser = async (formData: FormData) => { 
         "use server";
-        
+
         await prisma.users.create({data: {
             login: formData.get('login') as string,
             password: formData.get('password') as string,
@@ -34,7 +34,7 @@ export default async function addUser() {
           <input type="text" name="password" required/>
         </label>
         </div>
-        <SubmitBtn />
+        <SubmitBtn text='Add user' class='btn'/>
       </form>
       </>
     );

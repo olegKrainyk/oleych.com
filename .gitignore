@@ -7,12 +7,12 @@
 # testing
 /coverage
 
-# next.js
-/.next/
+# next.js ## faster server deployment
+# /.next/
 /out/
 
-# production
-/build
+# production 
+# /build 
 
 # misc
 .DS_Store
