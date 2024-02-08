@@ -1,5 +1,6 @@
-import { revalidatePath } from 'next/cache';
+import { revalidatePath } from 'next/cache'
 import prisma from '../../../lib/prisma'
+import SubmitBtn from '@/components/SubmitBtn/SubmitBtn'
 
 export default async function addUser() {
 
@@ -7,7 +8,6 @@ export default async function addUser() {
 
     const addUser = async (formData: FormData) => { 
         "use server";
-
         
         await prisma.users.create({data: {
             login: formData.get('login') as string,
@@ -34,7 +34,7 @@ export default async function addUser() {
           <input type="text" name="password" required/>
         </label>
         </div>
-        <button type="submit">Add user</button>
+        <SubmitBtn />
       </form>
       </>
     );
