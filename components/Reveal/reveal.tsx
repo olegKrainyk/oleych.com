@@ -43,7 +43,7 @@ import { motion, useInView, useAnimation } from "framer-motion"
             position: "absolute", 
             top: 4,
             bottom: 4,
-            height: '20px',
+            height: 'auto',
             left: 0,
             right: 0, 
             background: 'white',

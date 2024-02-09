@@ -5,10 +5,13 @@ import { revalidatePath } from "next/cache"
 
 export const addUser = async(formData: FormData) => { 
 
+    const userpicn: number = Math.floor(Math.random() * 4) + 1
+
     try {
         await prisma.users.create({data: {
             login: formData.get('login') as string,
             password: formData.get('password') as string,
+            userpic: userpicn,
         }
     })
     } catch (error) {

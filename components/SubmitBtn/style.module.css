@@ -3,18 +3,16 @@
     background-color: transparent;
     font-size: 40px;
     margin: 0 10px;
-    color: rgb(209, 20, 20);
+    color: rgb(242, 25, 25);
     cursor: pointer;
-    transition: 0.1s ease-in-out;
-    
+    transition: 0.2s ease-in;
 }
 
 .redminus:disabled {
-    color: rgb(63, 11, 11);
+    color: rgb(40, 7, 7);
     cursor: not-allowed;
-    margin-left: 40px;
+    margin-left: 70px;
 }
-
 
 .btn:disabled {
     background-color: rgb(67, 67, 67);

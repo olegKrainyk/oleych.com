@@ -31,15 +31,15 @@ export default async function User({ params }: { params: { id: number } }) {
         <div>
             <Reveal>
                 <div>
-                    user id: {data.user.id}
+                    user id: {data.user?.id}
                 </div>
             </Reveal>
             <div>
                 <Reveal>
-                    <div>login: {data.user.login}</div>
+                    <div>login: {data.user?.login}</div>
                 </Reveal>
                 <Reveal>
-                    <div>password: {data.user.password}</div>
+                    <div>password: {data.user?.password}</div>
                 </Reveal>
             </div>
         </div>
