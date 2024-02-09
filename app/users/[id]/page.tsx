@@ -1,8 +1,8 @@
 "use server";
 
-import { Reveal } from "@/components/Reveal/reveal";
-import prisma from "@/lib/prisma";
-import { users } from "@prisma/client"
+import { Reveal } from "@/components/Reveal/reveal"
+import UserPicture from "@/components/UserPicture/UserPicture"
+import prisma from "@/lib/prisma"
 import { revalidatePath } from "next/cache"
 
 export default async function User({ params }: { params: { id: number } }) {
@@ -27,8 +27,13 @@ export default async function User({ params }: { params: { id: number } }) {
     const data = await getUserData();
    
     return (
-        data.user === null ? <Reveal><>User not found</></Reveal> :
+        data.user === null || data.user === undefined ? <Reveal><>User not found</></Reveal> :
         <div>
+          <Reveal>
+            <>
+              <UserPicture userpic={data.user.userpic} size={150} />
+            </>
+          </Reveal>
             <Reveal>
                 <div>
                     user id: {data.user?.id}

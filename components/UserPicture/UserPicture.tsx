@@ -1,17 +1,19 @@
 "use client";
 
-import Image from "next/image";
+import style from './style.module.css'
+import Image from "next/image"
 
 
 interface Props {
-    userpic: number;
+    userpic: number,
+    size: number,
 }
 
 export default function UserPicture(Props: Props) {
 
   return (
     <>
-        <Image src={'/userPictures/user' + Props.userpic + '.jpg'} alt='userpic' width='50' height='50' />
+        <Image className={style.userpic} src={'/userPictures/user' + Props.userpic + '.jpg'} alt='userpic' width={Props.size} height={Props.size} />
     </>
   );
 
