@@ -4,15 +4,16 @@ import React from "react"
 import SubmitBtn from "../SubmitBtn/SubmitBtn"
 import { addUser } from "@/actions/addUser"
 import { useRef } from 'react'
+import { revalidatePath } from "next/cache";
 
 export default function AddUserForm() {
-
+  
   const ref = useRef<HTMLFormElement>(null)
 
   const handleSubmit = async (formData: FormData) => {
-
     await addUser(formData)
     ref.current?.reset()
+    revalidatePath('/users');
   }
 
     return (
