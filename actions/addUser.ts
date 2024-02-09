@@ -4,8 +4,8 @@ import prisma from "@/lib/prisma"
 import { revalidatePath } from "next/cache"
 
 export const addUser = async(formData: FormData) => { 
-
-    const userpicn: number = Math.floor(Math.random() * 4) + 1
+    
+    const userpicn: number = Math.floor(Math.random() * 9) + 1
 
     try {
         await prisma.users.create({data: {
