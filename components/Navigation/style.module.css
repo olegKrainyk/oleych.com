@@ -5,9 +5,8 @@
     right: 0;
     z-index: 100;
     width: auto;
-    transition: transform 0.3s ease-in-out;
     background-color: black;
-    border-left: 1px solid white;
+    /* border-left: 1px solid white; */
     display: flex;
 }
 
@@ -18,9 +17,8 @@
     right: 0;
     z-index: 100;
     width: 150px;
-    transition: transform 0.3s ease-in-out;
     background-color: black;
-    border-left: 1px solid white;
+    /* border-left: 1px solid white; */
 }
 
 .navigation {
