@@ -1,24 +1,40 @@
-.wrapper {
+.wrapperbig {
     height: 100dvh;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 100;
-    /* width: 100vw; */
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+    background-color: black;
+    border-left: 1px solid white;
+    display: flex;
+}
+
+.wrapper {
+    height: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 100;
     width: 150px;
     transition: transform 0.3s ease-in-out;
     background-color: black;
-    clip-path: polygon(100% 0, 0% 0, 100% 100%);
+    border-left: 1px solid white;
 }
 
 .navigation {
-    height: 30dvh;
+    height: 20dvh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    margin-left: 30px;
     margin-top: 30px;
+}
+
+.btn {
+    position: relative;
+    cursor: pointer;
+    z-index: 101;
 }
 
 .link {
@@ -29,4 +45,5 @@
     width: 100%;
     padding: 20px;
     text-align: center;
+    cursor: pointer;
 }
