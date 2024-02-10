@@ -29,11 +29,11 @@ export default async function Users({}) {
             
               <Reveal>
                 <div className={style.user}>
-                  <Link href={`users/${user.id}`}>
+                  <Link href={`users/${user.username}`}>
                     <UserPicture userpic={user.userpic} size={50} />
                   </Link>
 
-                  <div className={style.info}>{user.login} --- pass: {user.password} ---- id: {user.id}</div>
+                  <div className={style.info}>{user.username} --- pass: {user.password} ---- id: {user.id}</div>
                 </div>
               </Reveal>
               </div>

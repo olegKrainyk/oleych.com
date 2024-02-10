@@ -9,7 +9,7 @@ export const addUser = async(formData: FormData) => {
 
     try {
         await prisma.users.create({data: {
-            login: formData.get('login') as string,
+            username: formData.get('username') as string,
             password: formData.get('password') as string,
             userpic: userpicn,
         }

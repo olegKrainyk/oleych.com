@@ -5,13 +5,13 @@ import UserPicture from "@/components/UserPicture/UserPicture"
 import prisma from "@/lib/prisma"
 import { revalidatePath } from "next/cache"
 
-export default async function User({ params }: { params: { id: number } }) {
+export default async function User({ params }: { params: { username: string } }) {
 
     async function getUserData() {
     try {
         const user = await prisma.users.findUnique({
           where: {
-            id: Number(params.id),
+            username: String(params.username),
           },
         });
     
@@ -20,7 +20,7 @@ export default async function User({ params }: { params: { id: number } }) {
         console.error('Error fetching user data:', error);
         return { error: 'Error fetching user data' };
       } finally {
-        revalidatePath(`/users/${params.id}`);
+        revalidatePath(`/users/${params.username}`);
       }
     }
 
@@ -41,7 +41,7 @@ export default async function User({ params }: { params: { id: number } }) {
             </Reveal>
             <div>
                 <Reveal>
-                    <div>login: {data.user?.login}</div>
+                    <div>Username: {data.user?.username}</div>
                 </Reveal>
                 <Reveal>
                     <div>password: {data.user?.password}</div>

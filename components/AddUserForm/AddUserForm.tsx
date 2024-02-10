@@ -18,8 +18,8 @@ export default function AddUserForm() {
         <form ref={ref} action={handleSubmit}>
             <div>
             <label>
-              Login:
-              <input type="text" name="login" required />
+              Username:
+              <input type="text" name="username" required />
             </label>
             </div>
             <div>
