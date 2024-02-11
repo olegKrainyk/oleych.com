@@ -12,17 +12,19 @@ export default function Navigation() {
     const variants = {
         active: {
             x: '0',
-            width: '150px',
+            width: '130px',
+            opacity: 1,
             transition: {
-                duration: 0.2,
+                duration: 0.3,
                 ease: "easeIn",
             },
         },
         closed: {
-            x: "100%",
+            x: "130%",
             width: "0",
+            opacity: 0,
             transition: {
-                duration: 0.2,
+                duration: 0.1,
                 ease: "easeIn",
             },
         },
