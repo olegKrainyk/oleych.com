@@ -1,0 +1,24 @@
+.stripes {
+    width: 33px;
+    height: 4px;
+    margin: 4px 0;
+    border-radius: 3px;
+    transform-origin: 0;
+    transition: all 0s cubic-bezier(0.645, 0.3, 0.2, 1.2);
+    background-color: white;
+}
+
+.burger {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 2px var(--white));
+    z-index: 101;
+}

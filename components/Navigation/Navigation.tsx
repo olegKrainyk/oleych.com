@@ -4,6 +4,7 @@ import React from "react"
 import Link from "next/link"
 import style from "./style.module.css"
 import { motion } from "framer-motion"
+import Burger from "../Burger/Burger";
 
 export default function Navigation() {
 
@@ -34,9 +35,7 @@ export default function Navigation() {
 
   return (
     <div className={style.wrapperbig}>
-        <div onClick={() => setIsOpen(!isOpen)} className={style.btn}>
-                &#10006;
-        </div>
+        <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
         <motion.div animate={isOpen ? 'active' : 'closed'} initial={false} variants={variants} className={style.wrapper}>
 
             <nav className={style.navigation}>
