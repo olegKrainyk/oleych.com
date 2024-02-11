@@ -1,0 +1,21 @@
+.img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(37, 37, 37);
+    margin: 0 auto;
+    display: block;
+}
+
+.info {
+    margin-top: 10px;
+}
+
+.text {
+    margin-left: 20px;
+    height: 20px;
+    width: 180px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 15px;
+    margin: 20px 0;
+}

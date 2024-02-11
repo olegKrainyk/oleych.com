@@ -7,6 +7,8 @@ import { revalidatePath } from "next/cache"
 
 export default async function User({ params }: { params: { username: string } }) {
 
+  await new Promise((resolve) => setTimeout(resolve, 1000))
+
     async function getUserData() {
     try {
         const user = await prisma.users.findUnique({
