@@ -12,10 +12,10 @@ import Loading from "./loading"
 
 export default async function Users({}) {
 
-  await new Promise((resolve) => setTimeout(resolve, 1000))
+  // await new Promise((resolve) => setTimeout(resolve, 1000));
 
   async function fetchUsers() {
-    const data = await prisma.users.findMany()
+    const data = await prisma.users.findMany();
     return data;
   }
 

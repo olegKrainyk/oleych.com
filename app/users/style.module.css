@@ -3,6 +3,8 @@
     flex-direction: row;
     padding: 0 10px;
     align-items: center;
+    margin: 15px 0;
+    margin-left: 20px;
 }
 
 .user {

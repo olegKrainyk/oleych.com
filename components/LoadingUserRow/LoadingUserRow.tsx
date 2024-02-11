@@ -7,6 +7,7 @@ import style from './loading.module.css'
 export default async function LoadingUserRow() {
     return (
         <div className={style.wrapper}>
+            <div className={style.animation}></div>
             <div className={style.remove}></div>
             <div className={style.user}>
                 <div>
