@@ -1,4 +1,11 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .img {
+    overflow: hidden;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -12,10 +19,44 @@
 }
 
 .text {
+    overflow: hidden;
     margin-left: 20px;
     height: 20px;
     width: 180px;
     background-color: rgb(37, 37, 37);
     border-radius: 15px;
     margin: 20px 0;
+}
+
+
+.animation {
+    min-width: 20px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: rgba(93, 93, 93, 0.4);
+    filter: blur(50px);
+    animation-name: gradient;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+
+.imganimation {
+    min-width: 20px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: rgba(93, 93, 93, 0.4);
+    filter: blur(50px);
+    animation-name: gradient;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gradient {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(400%);
+    }
+
 }
