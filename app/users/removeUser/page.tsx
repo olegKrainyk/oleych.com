@@ -1,5 +1,7 @@
-import { revalidatePath } from 'next/cache';
+import { revalidatePath } from 'next/cache'
 import prisma from '../../../lib/prisma'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 export default async function removeUser() {
 
@@ -23,6 +25,7 @@ export default async function removeUser() {
 
     return (
       <>
+      <Suspense fallback={<Loading />}>
       <form action={removeUser}>
         <div>
         <label>
@@ -32,6 +35,7 @@ export default async function removeUser() {
         </div>
         <button type="submit">Remove user</button>
       </form>
+      </Suspense>
       </>
     );
   }
