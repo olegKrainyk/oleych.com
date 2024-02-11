@@ -12,16 +12,18 @@ export default function Navigation() {
     const variants = {
         active: {
             x: '0',
-            width: '130px',
+            width: '300px',
+            rotate: 0,
             opacity: 1,
             transition: {
-                duration: 0.3,
+                duration: 0.2,
                 ease: "easeIn",
             },
         },
         closed: {
             x: "130%",
             width: "0",
+            rotate: 50,
             opacity: 0,
             transition: {
                 duration: 0.1,
