@@ -24,12 +24,12 @@ export default function Burger({  setIsOpen, isOpen }: Props) {
     }
 
     return (
-        <div className={style.wrapper}>
+        // <div className={isOpen ? style.wrapperopen : style.wrapper}>
             <div onClick={() => setIsOpen(!isOpen)} className={style.burger}>
                 <motion.div animate={isOpen ? 'open' : 'close'} variants={menu_1_child_variants} className={style.stripes}></motion.div>
                 <motion.div animate={isOpen ? 'open' : 'close'} variants={menu_2_child_variants} className={style.stripes}></motion.div>
                 <motion.div animate={isOpen ? 'open' : 'close'} variants={menu_3_child_variants} className={style.stripes}></motion.div>
             </div>
-        </div>
+        /* </div> */
     )
 }

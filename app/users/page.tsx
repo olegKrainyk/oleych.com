@@ -13,14 +13,21 @@ import Loading from "./loading"
 export default async function Users({}) {
 
   // await new Promise((resolve) => setTimeout(resolve, 1000));
+    async function getUserData() {
+        try {
+          const data = await prisma.users.findMany();
+          return data;
+        } catch (error) {
+          console.error('Error fetching user data:', error);
+          const data: users[] = [{id: 0, username: 'error', userpic: 1, password: 'error'}];
+          return data;
+        }
+        finally {
+          revalidatePath('/users');
+        }
+    }
 
-  async function fetchUsers() {
-    const data = await prisma.users.findMany();
-    return data;
-  }
-
-  const data = await fetchUsers();
-  revalidatePath('/users');
+    const data = await getUserData();
 
     return (
       <div>

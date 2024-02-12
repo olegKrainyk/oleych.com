@@ -23,7 +23,7 @@ export default function Navigation() {
         },
         closed: {
             x: "130%",
-            width: "0",
+            width: "0px",
             rotate: 50,
             opacity: 0,
             transition: {
@@ -37,7 +37,6 @@ export default function Navigation() {
     <div className={style.wrapperbig}>
         <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
         <motion.div animate={isOpen ? 'active' : 'closed'} initial={false} variants={variants} className={style.wrapper}>
-
             <nav className={style.navigation}>
                 <Link href="/" className={style.link}>
                     Home

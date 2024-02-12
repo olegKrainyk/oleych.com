@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal/reveal"
 import UserPicture from "@/components/UserPicture/UserPicture"
 import prisma from "@/lib/prisma"
 import { revalidatePath } from "next/cache"
+import style from './style.module.css'
 
 export default async function User({ params }: { params: { username: string } }) {
 
@@ -29,7 +30,7 @@ export default async function User({ params }: { params: { username: string } })
     const data = await getUserData();
    
     return (
-        data.user === null || data.user === undefined ? <Reveal><>User not found</></Reveal> :
+        data.user === null || data.user === undefined ? <div className={style.notfound}><Reveal><div className={style.notfoundtext}>User not found</div></Reveal></div> :
         <div>
           <Reveal>
             <>
