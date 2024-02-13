@@ -11,7 +11,7 @@ import Loading from "./loading"
 import UsersList from "@/components/UsersList/UsersList"
 
 export default async function Users({}) {
-  
+
     return (
       <div>
         <div>USERS</div>
@@ -20,7 +20,7 @@ export default async function Users({}) {
             <UsersList />
         </Suspense>
 
-        <Link href={"/users/addUser"}>Add user</Link>
+        {/* <Link href={"/users/addUser"}>Add user</Link> */}
       </div>
     );
   }
