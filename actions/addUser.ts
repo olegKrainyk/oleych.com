@@ -3,7 +3,7 @@
 import prisma from "@/lib/prisma"
 import { revalidatePath } from "next/cache"
 
-export const addUser = async(formData: FormData) => { 
+export const addUser = async(formData: FormData) => {
 
     try{
         const userExists = await prisma.users.findUnique({

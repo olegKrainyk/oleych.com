@@ -45,7 +45,10 @@ export default function Navigation() {
                     Users
                 </Link>
                 <Link href="/users/addUser" className={style.link}>
-                    Add User
+                    Add
+                </Link>
+                <Link href="/users/removeUser" className={style.link}>
+                    Remove
                 </Link>
             </nav>
         </motion.div>
