@@ -12,6 +12,22 @@ export default function AddUserForm() {
   const [response, setResponse] = React.useState<string | null>('')
 
   const handleSubmit = async (formData: FormData) => {
+
+    let username = (formData.get('username') as string).replace(/\s+/g, '')
+    if (username.length < 5) {
+      setResponse('Username must be at least 5 characters long')
+      return
+    }
+    formData.set('username', username)
+
+    let password = (formData.get('password') as string).replace(/\s+/g, '')
+    if (password.length < 8) {
+      setResponse('Password must be at least 8 characters long')
+      return
+    }
+    formData.set('password', password)
+
+
     await addUser(formData).then((res) => {
       if (res?.error) {
        setResponse(res.error)
