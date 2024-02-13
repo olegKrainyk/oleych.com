@@ -27,7 +27,6 @@ export default function AddUserForm() {
     }
     formData.set('password', password)
 
-
     await addUser(formData).then((res) => {
       if (res?.error) {
        setResponse(res.error)
@@ -54,7 +53,7 @@ export default function AddUserForm() {
             </label>
             </div>
             <div className={style.submit}>
-              <SubmitBtn text='Add user' class='btn'/>
+              <SubmitBtn text='Add' class='btn'/>
               <div className={style.response}>{response}</div>
             </div>
         </form>

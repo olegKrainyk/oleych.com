@@ -5,10 +5,14 @@ import Loading from './loading'
 export default async function addUser() {
 
     return (
-      <>
-        <Suspense fallback={<Loading />}>
-          <AddUserForm />
-        </Suspense>
-      </>
+      <div>
+        <div>Add USER</div> 
+
+        <div>
+          <Suspense fallback={<Loading />}>
+            <AddUserForm />
+          </Suspense>
+        </div>
+      </div>
     );
   }

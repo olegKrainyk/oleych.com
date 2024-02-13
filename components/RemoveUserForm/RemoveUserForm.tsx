@@ -32,7 +32,7 @@ export default function RemoveUserForm() {
         </div>
 
         <div className={style.submit}>
-              <SubmitBtn text='Remove user' class='btn'/>
+              <SubmitBtn text='Remove' class='btn'/>
               <div className={style.response}>{response}</div>
         </div>
       </form>

@@ -19,22 +19,19 @@
     z-index: 100;
     width: 150px;
     background-color: rgb(22, 22, 22);
-    display: flex;
-    justify-content: center;
-    /* border-left: 1px solid white; */
+    display: flex-end;
+    justify-content: baseline;
     clip-path: polygon(100% 0, 0 0, 100% 100%);
 }
 
 .navigation {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 15px;
     text-wrap: nowrap;
-    width: 40%;
-    align-items: center;
+    width: 80%;
     transform-origin: bottom;
     transform: rotate(0deg);
-    margin-left: 8ch;
 }
 
 .btn {
@@ -50,7 +47,6 @@
 .link {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
     transition: color 0.3s ease-in-out;
     padding: 10px 20px;
     margin: 10px 0;
@@ -60,6 +56,8 @@
     transition: 0.2s;
     width: 100%;
     font-size: 1.5rem;
+    font-weight: 600;
+
 }
 
 .link:hover {
