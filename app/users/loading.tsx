@@ -10,6 +10,7 @@ const Loading: React.FC = () => {
             <LoadingUserRow/>
             <LoadingUserRow/>
             <LoadingUserRow/>
+            <LoadingUserRow/>
         </div>
     );
 };

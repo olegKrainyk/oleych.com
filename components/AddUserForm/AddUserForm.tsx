@@ -5,7 +5,6 @@ import SubmitBtn from "../SubmitBtn/SubmitBtn"
 import { addUser } from "@/actions/addUser"
 import { useRef } from 'react'
 import style from './style.module.css'
-import { revalidatePath } from "next/cache";
 
 export default function AddUserForm() {
 

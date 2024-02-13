@@ -6,9 +6,7 @@ export default function About() {
     
     <div>
       <Reveal>
-        <>
-        <div>ABOUT</div>
-        </>
+          <div>ABOUT</div>
       </Reveal>
     </div>
   );

@@ -8,7 +8,7 @@ import style from './style.module.css'
 
 export default async function User({ params }: { params: { username: string } }) {
 
-  await new Promise((resolve) => setTimeout(resolve, 5000))
+  // await new Promise((resolve) => setTimeout(resolve, 5000))
 
     async function getUserData() {
     try {
@@ -51,5 +51,5 @@ export default async function User({ params }: { params: { username: string } })
                 </Reveal>
             </div>
         </div>
-        );
+      );
 }
