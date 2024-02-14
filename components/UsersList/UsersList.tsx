@@ -11,7 +11,7 @@ import { Reveal } from "../Reveal/reveal"
 
 export default async function UsersList({}) {
 
-    // await new Promise((resolve) => setTimeout(resolve, 5000))
+    await new Promise((resolve) => setTimeout(resolve, 1000))
 
     async function getUserData() {
         try {
@@ -36,12 +36,12 @@ export default async function UsersList({}) {
                     return (
                         <div className={style.wrapper} key={user.id}>
                         <RemoveUser id={user.id}>
-                        <div></div>
+                            <></>
                         </RemoveUser>
                     
                         <Reveal>
                         <div className={style.user}>
-                            <Link href={`users/${user.username}`}>
+                            <Link href={`/${user.username}`}>
                             <UserPicture userpic={user.userpic} size={50} />
                             </Link>
         
