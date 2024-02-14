@@ -41,7 +41,7 @@ export default async function UsersList({}) {
                     
                         <Reveal>
                         <div className={style.user}>
-                            <Link href={`users/${user.username}`}>
+                            <Link href={`/${user.username}`}>
                             <UserPicture userpic={user.userpic} size={50} />
                             </Link>
         

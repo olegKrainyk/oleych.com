@@ -42,7 +42,7 @@ export default function Navigation() {
                 <NavLink href="/" text="Home" />
                 <NavLink href="/users" text="Users" />
                 <NavLink href="/users/addUser" text="Add" />
-                <NavLink href="/users/removeUsers" text="Remove" />
+                <NavLink href="/users/removeUser" text="Remove" />
             </nav>
         </motion.div>
     </div>
