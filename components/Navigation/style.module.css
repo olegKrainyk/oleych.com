@@ -1,11 +1,12 @@
 .wrapperblur {
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     right: 0;
     z-index: 99;
+    transition: 0.4s;
 }
 
 .wrapperbig {
@@ -39,10 +40,6 @@
     text-wrap: nowrap;
     transform-origin: bottom;
     transform: rotate(0deg);
-}
-
-.navigation:first-child {
-    
 }
 
 .btn {

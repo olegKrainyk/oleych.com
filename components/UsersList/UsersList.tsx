@@ -7,7 +7,6 @@ import style from './style.module.css'
 import { users } from "@prisma/client"
 import { RemoveUser } from "../RemoveUser/RemoveUser"
 import UserPicture from "../UserPicture/UserPicture"
-import { Reveal } from "../Reveal/reveal"
 
 export default async function UsersList({}) {
 
@@ -30,24 +29,24 @@ export default async function UsersList({}) {
     const data = await getUserData();  
 
     return (
-        data === null || data === undefined ? <div className={style.notfound}><Reveal><div className={style.notfoundtext}>Error loading users</div></Reveal></div> :
+        data === null || data === undefined ? <div className={style.notfound}><div className={style.notfoundtext}>Error loading users</div></div> :
             <>
                 {data.map((user: users) => {
                     return (
                         <div className={style.wrapper} key={user.id}>
-                        <RemoveUser id={user.id}>
-                            <></>
-                        </RemoveUser>
-                    
-                        <Reveal>
-                        <div className={style.user}>
-                            <Link href={`/${user.username}`}>
-                            <UserPicture userpic={user.userpic} size={50} />
-                            </Link>
-        
-                            <div className={style.info}>id: {user.id} ---- {user.username}</div>
-                        </div>
-                        </Reveal>
+                            
+                            <RemoveUser id={user.id}>
+                                <></>
+                            </RemoveUser>
+                        
+                            <div className={style.user}>
+                                <Link href={`/${user.username}`}>
+                                <UserPicture userpic={user.userpic} size={50} />
+                                </Link>
+            
+                                <div className={style.info}>id: {user.id} ---- {user.username}</div>
+                            </div>
+
                         </div>
                 );})}
             </>

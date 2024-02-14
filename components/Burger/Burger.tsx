@@ -1,4 +1,5 @@
 "use client"
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import style from './style.module.css'
@@ -20,11 +21,11 @@ export default function Burger({  setIsOpen, isOpen }: Props) {
     }
     const menu_3_child_variants = {
         open: {transform: 'rotate(-45deg)'},
-        close: {transform: 'rotate(0deg)'}
-    }
+        close: {transform: 'rotate(0deg)'}  
+    }       
 
     return (
-            <div onClick={() => setIsOpen(!isOpen)} className={style.burger}>
+            <div onClick={() => setIsOpen(!isOpen)} className={style.burger} tabIndex={5}>
                 <motion.div animate={isOpen ? 'open' : 'close'} variants={menu_1_child_variants} className={style.stripes}></motion.div>
                 <motion.div animate={isOpen ? 'open' : 'close'} variants={menu_2_child_variants} className={style.stripes}></motion.div>
                 <motion.div animate={isOpen ? 'open' : 'close'} variants={menu_3_child_variants} className={style.stripes}></motion.div>

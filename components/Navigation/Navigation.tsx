@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react"
-import Link from "next/link"
 import style from "./style.module.css"
 import { motion } from "framer-motion"
-import Burger from "../Burger/Burger";
-import NavLink from "./NavLink/NavLink";
+import Burger from "../Burger/Burger"
+import NavLink from "./NavLink/NavLink"
 
 export default function Navigation() {
 
@@ -18,7 +17,7 @@ export default function Navigation() {
             rotate: 0,
             opacity: 1,
             transition: {
-                duration: 0.2,
+                duration: 0.3,
                 ease: "easeIn",
             },
         },
@@ -28,7 +27,7 @@ export default function Navigation() {
             rotate: 50,
             opacity: 0,
             transition: {
-                duration: 0.1,
+                duration: 0.3,
                 ease: "easeIn",
             },
         },
@@ -40,10 +39,10 @@ export default function Navigation() {
             <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
             <motion.div animate={isOpen ? 'active' : 'closed'} initial={false} variants={variants} className={style.wrapper}>
                 <nav className={style.navigation}>
-                    <NavLink href="/" text="Home" />
-                    <NavLink href="/users" text="Users" />
-                    <NavLink href="/users/addUser" text="Add" />
-                    <NavLink href="/users/removeUser" text="Remove" />
+                    <NavLink href="/" text="Home" handleClick={() => setIsOpen(!isOpen)}/>
+                    <NavLink href="/users" text="Users" handleClick={() => setIsOpen(!isOpen)} />
+                    <NavLink href="/users/addUser" text="Add" handleClick={() => setIsOpen(!isOpen)} />
+                    <NavLink href="/users/removeUser" text="Remove" handleClick={() => setIsOpen(!isOpen)} />
                 </nav>
             </motion.div>
         </div>

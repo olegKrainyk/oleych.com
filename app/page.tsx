@@ -1,16 +1,15 @@
-import Link from "next/link";
-import { Reveal } from "../components/Reveal/reveal";
+"use server";
 
-export default function Home() {
+import Link from "next/link"
+import { Reveal } from "../components/Reveal/reveal"
+import { motion } from "framer-motion"
+
+export default async function Home() {
 
   return (
-    <main>
-      <Reveal>
-        <>
+    <div>
         <div>HOME</div>
-          <div>oleych.com</div>
-        </>
-      </Reveal>
-    </main>
+        <div>oleych.com</div>
+    </div>
   );
 }
