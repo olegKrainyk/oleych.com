@@ -27,11 +27,13 @@
 .navigation {
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
     text-wrap: nowrap;
-    width: 80%;
     transform-origin: bottom;
     transform: rotate(0deg);
+}
+
+.navigation:first-child {
+    
 }
 
 .btn {
@@ -42,25 +44,6 @@
     font-size: 30px;
     height: 30px;
     z-index: 101;
-}
-
-.link {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-    padding: 10px 20px;
-    margin: 10px 0;
-    text-align: right;
-    cursor: pointer;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: 0.2s;
-    width: 100%;
-    font-size: 1.5rem;
-    font-weight: 600;
-
-}
-
-.link:hover {
 }
 
 @media (max-width: 768px) {

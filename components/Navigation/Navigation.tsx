@@ -5,6 +5,7 @@ import Link from "next/link"
 import style from "./style.module.css"
 import { motion } from "framer-motion"
 import Burger from "../Burger/Burger";
+import NavLink from "./NavLink/NavLink";
 
 export default function Navigation() {
 
@@ -38,18 +39,10 @@ export default function Navigation() {
         <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
         <motion.div animate={isOpen ? 'active' : 'closed'} initial={false} variants={variants} className={style.wrapper}>
             <nav className={style.navigation}>
-                <Link href="/" className={style.link}>
-                    Home
-                </Link>
-                <Link href="/users" className={style.link}>
-                    Users
-                </Link>
-                <Link href="/users/addUser" className={style.link}>
-                    Add
-                </Link>
-                <Link href="/users/removeUser" className={style.link}>
-                    Remove
-                </Link>
+                <NavLink href="/" text="Home" />
+                <NavLink href="/users" text="Users" />
+                <NavLink href="/users/addUser" text="Add" />
+                <NavLink href="/users/removeUsers" text="Remove" />
             </nav>
         </motion.div>
     </div>
