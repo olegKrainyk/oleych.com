@@ -1,17 +1,22 @@
 .redminus {
     border: none;
-    background-color: transparent;
-    font-size: 40px;
-    margin: 0 10px;
-    color: rgb(242, 25, 25);
+    background-color: rgb(242, 25, 25);
+    border-radius: 8px;
+    width: 15px;
+    height: 4px;
+    padding: none;
     cursor: pointer;
     transition: 0.2s ease-in;
 }
 
 .redminus:disabled {
-    color: rgb(40, 7, 7);
+    background-color: rgb(40, 7, 7);
     cursor: not-allowed;
     margin-left: 70px;
+}
+
+.btn { 
+    padding: 10px 20px;
 }
 
 .btn:disabled {
