@@ -35,16 +35,18 @@ export default function Navigation() {
     }
 
   return (
-    <div className={style.wrapperbig}>
-        <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
-        <motion.div animate={isOpen ? 'active' : 'closed'} initial={false} variants={variants} className={style.wrapper}>
-            <nav className={style.navigation}>
-                <NavLink href="/" text="Home" />
-                <NavLink href="/users" text="Users" />
-                <NavLink href="/users/addUser" text="Add" />
-                <NavLink href="/users/removeUser" text="Remove" />
-            </nav>
-        </motion.div>
+    <div className={ isOpen ? `${style.wrapperblur}`: `''`}>
+        <div className={style.wrapperbig}>
+            <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
+            <motion.div animate={isOpen ? 'active' : 'closed'} initial={false} variants={variants} className={style.wrapper}>
+                <nav className={style.navigation}>
+                    <NavLink href="/" text="Home" />
+                    <NavLink href="/users" text="Users" />
+                    <NavLink href="/users/addUser" text="Add" />
+                    <NavLink href="/users/removeUser" text="Remove" />
+                </nav>
+            </motion.div>
+        </div>
     </div>
   );
 }
