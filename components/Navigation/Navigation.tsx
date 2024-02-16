@@ -39,10 +39,10 @@ export default function Navigation() {
             <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
             <motion.div animate={isOpen ? 'active' : 'closed'} initial={false} variants={variants} className={style.wrapper}>
                 <nav className={style.navigation}>
-                    <NavLink href="/" text="Home" handleClick={() => setIsOpen(!isOpen)}/>
-                    <NavLink href="/users" text="Users" handleClick={() => setIsOpen(!isOpen)} />
-                    <NavLink href="/users/addUser" text="Add" handleClick={() => setIsOpen(!isOpen)} />
-                    <NavLink href="/users/removeUser" text="Remove" handleClick={() => setIsOpen(!isOpen)} />
+                    <NavLink href="/" text="Home" handleClick={() => setIsOpen(false)}/>
+                    <NavLink href="/users" text="Users" handleClick={() => setIsOpen(false)} />
+                    <NavLink href="/users/addUser" text="Add" handleClick={() => setIsOpen(false)} />
+                    <NavLink href="/users/removeUser" text="Remove" handleClick={() => setIsOpen(false)} />
                 </nav>
             </motion.div>
         </div>
