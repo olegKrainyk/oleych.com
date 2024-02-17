@@ -24,8 +24,8 @@ export default function Burger({  setIsOpen, isOpen }: Props) {
         close: {transform: 'rotate(0deg)'}  
     }  
     const menu_variants = {
-        open: {rotate: "-360deg", transition: {duration: 0.3}},
-        close: {rotate: 0, transition: {duration: 0.3}}
+        open: {rotate: "-360deg", transition: {duration: 0.2, delay: 0.3},},
+        close: {rotate: 0, transition: {duration: 0.2}}
     }
 
     return (
